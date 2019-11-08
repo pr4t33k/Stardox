@@ -18,25 +18,29 @@ pink = '\033[95m'
 lightcyan = '\033[96m'
 end = '\x1b[0m'
 
-
+# Used for printing error message on terminal
 def error(message):
     message = str(message)
     initial =red + '[-] '
     print(initial + end + message)
 
-
-def success(message):
+# Used for printing success message on terminal
+def success(message,verbose):
     message = str(message)
     initial = lightgreen+'[+] '
-    print(initial + end + message)
+    if verbose:                               # Checking if verbose is True or False
+        print(initial + end + message)
 
-
-def info(message):
+# Used for printing warning or information on terminal
+def info(message,verbose):
     message = str(message)
-    message = '[!] ' + message
-    print(yellow + message + end)
+    initial = white + '[!] '
+    if verbose:                               # Checking if verbose is True or False
+        print(initial + end + message)
 
-def process(message):
+# Used for printing process related updates on terminal
+def process(message,verbose):
     message=str(message)
     initial= white + '[~] '
-    print(initial + end + message)
+    if verbose:                               # Checking if verbose is True or False
+        print(initial + end + message)

@@ -16,6 +16,10 @@ sdfa
   <a href="https://github.com/0xprateek/stardox">
     <img src="https://img.shields.io/badge/OS-Linux-orange.svg">
   </a>
+  </br></br>
+  This Tool is available in:</br>
+  <a href = "https://blackarch.org/recon.html"><img src = "https://raw.githubusercontent.com/0xPrateek/Stardox/master/Logo/blackarch.png"></a>
+  </br>
 </p>
 
 ## About [Stardox](https://github.com/0xprateek/stardox)
@@ -48,14 +52,24 @@ P.S: Many new things will be added soon.
 
 1. `git clone https://github.com/0xprateek/stardox`
 2. `cd stardox`
-3. `python ./setup.py install`
+3. `pip install -r requirements.txt`
 
 #### Starting Stardox :
 
-1. `cd stardox/src`
-2. `python3 stardox.py`
+1. `cd stardox/src`<br/>
+2.  a)  **Using Command line arguments** <br/>
+         `python3 stardox.py https://github.com/Username/repository-URL `<br/>
+    b)  **Without Command line arguments**<br/>
+     `    python3 stardox.py`<br/>
+  #### Usage :
+     stardox.py [-h] [-v] repositoryURL
 
-Example Usage : `python3 ./stardox.py
+  ##### positional arguments:
+     repositoryURL  Path to repository.
+
+  ##### optional arguments:
+     -h, --help     show this help message and exit
+     -v, --verbose  Verbose
 
 
 ### Contributing
